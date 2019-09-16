@@ -4,7 +4,7 @@ A set of custom widgets for use with dashboard pages in the Cireson Portal for S
 Usage:
 These widgets are designed to be used with an HTML Widget from a Dashboard Page in the Cireson Portal and to populate data with an existing dashboard query.  The individual widget is called by having these scripts running in custom.js (preferably with the [loadScript](https://community.cireson.com/discussion/comment/14268#Comment_14268) function).  Each widget can be rendered as follows:
 
-##Custom Scheduler (Calendar)
+## Custom Scheduler (Calendar)
 To add the custom scheduler, create a div in the HTML widget with the class name of customScheduler like this:
   `<div class="customScheduler"><div>`
  
