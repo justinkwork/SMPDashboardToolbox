@@ -40,3 +40,6 @@ Here is an example of a custom scheduler definition:
 "Legend": "true",
 	"endField": "ScheduledEndDate"
 }</div>`
+
+Screenshot: 
+![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/calSS.png "Calendar Screenshot")
