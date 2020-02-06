@@ -9,7 +9,8 @@ function customScheduler() {
 		}
 		return true;
 	}
-	
+	var calStyle = "<style>.schedulerLegend {display: inline-block;width:100%}.legendEntry {display: inline-block;margin: 10px 10px 10px 10px;padding: 5px 20px 5px 5px;</style>";
+	$('body').append(calStyle);
 	function buildScheduler(widget) {
 		if (IsJsonString(widget.text())) {
 			var gDef = JSON.parse(widget.text());
@@ -67,7 +68,7 @@ function customScheduler() {
 						else {
 							chk = 'checked';
 						}
-						$('#' + id).append('<span class="legendEntry" style="background: ' + e.color + ';"><input class="legendCheck" ' + chk + ' type="checkbox" value="' + e.value + '" >' + e.value + pic + '</span>');
+						$('#' + id).append('<div class="legendEntry" style="background: ' + e.color + ';"><input class="legendCheck" ' + chk + ' type="checkbox" value="' + e.value + '" >' + e.value + pic + '</div>');
 						
 
 					})
@@ -88,14 +89,11 @@ function customScheduler() {
 					
 					var legendEntryCSS = {
 						 "white-space" : "nowrap",
-						 "display": "block",
 						 "border-radius": "25px",
-						 "margin-top": "5px",
 						 "border": "solid 1px black",	
 					}
 					$('.legendEntry').css(legendEntryCSS);
 					$('.legendCheck').css('width', '40px');
-					$('.schedulerLegend').css('width', '300px');
 					$('.legendEntry').first().children().first().trigger('change');
 				}
 				
