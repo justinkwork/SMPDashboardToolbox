@@ -38,7 +38,7 @@ Here is an example of a custom scheduler definition:
 }</div>`
 
 Screenshot: 
-![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/calSS.png "Calendar Screenshot")
+![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/newCalSS.png "Calendar Screenshot")
 
 ## Hierarchy Grid
 This is a grid used for aggregating data, but being able to expand the aggregated data and see the data underneath.  For example, if you wanted to know the number of work items in a given status you would have a query that counts and groups the work items by status.  But you might also like to see the work items in a given status.  Using the hierarchy widget, you have a query for the "grouped by status" query and a query that represents the work items themselves in each of the statuses.  Expanding the status in the top query, you can see the work items in that status in the same grid.
