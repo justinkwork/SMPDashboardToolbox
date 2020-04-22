@@ -43,3 +43,25 @@ Here is an example of a custom scheduler definition:
 
 Screenshot: 
 ![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/calSS.png "Calendar Screenshot")
+
+## Hierarchy Grid
+This is a grid used for aggregating data, but being able to expand the aggregated data and see the data underneath.  For example, if you wanted to know the number of work items in a given status you would have a query that counts and groups the work items by status.  But you might also like to see the work items in a given status.  Using the hierarchy widget, you have a query for the "grouped by status" query and a query that represents the work items themselves in each of the statuses.  Expanding the status in the top query, you can see the work items in that status in the same grid.
+
+To add the hierarchy grid, create a div in the HTML widget with the class name of gridHierarchy like this:
+  `<div class="gridHierarchy"><div>`
+  
+  To populate data into the Scheduler, there needs to be a JSON definition.  
+ Here are the properties that will need to be added to the JSON:
++ dash1 (**required**) - this is the query id of the "top level" grid where the aggregation will be shown
++ dash2 (**required**) - this is the query id of the "data underneath" query where the data for a given row in the top level query comes from
++ link (**required**) - this is the field that will link the aggregated query to the data query.  In the above example, the Status field would be the link.  Both queries would need a status field and the field names would be case sensitve.  The link field will have to match the case of the field in both queries.
++ dash1Columns (**required**) - An array of (case sensitve) field names from the _dash1_ query.  It must contain the field specified as the _link_.
++ dash2Columns (**required**) - An array of (case sensitve) field names from the _dash2_ query.  It must contain the field specified as the _link_.
+
+Here is an example of a custom scheduler definition:   
+`<div class='gridHierarchy' style='height: 450px;'>{"dash1":"e31fd4b0-6588-bed7-de1c-44315d006f37", 
+"dash2":"b0c47cf0-8935-3667-e32e-941b15065d60",
+"link":"Status",
+"dash1Columns": ["Status", "WICount"],
+"dash2Columns": ["WorkItemId", "Title", "Status", "AffectedUser"]
+}</div>`
