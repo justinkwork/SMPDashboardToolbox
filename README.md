@@ -26,19 +26,15 @@ Suboptions for colorValues:
    * url(_optional_) - if provided, will add an image with the supplied url as the source to the legend for the specified value
 
 Here is an example of a custom scheduler definition:   
-`<div class='customScheduler'>{  
-	"dash1": "3dbcc15c-6377-6d3a-b66f-9cf9fa5c0e96",  
-	"colorValues": [  
-		{"value": "04b69835-6343-4de2-4b19-6be08c612989", "color": "#3bcf79"},  
-  {"value": "e6c9cf6e-d7fe-1b5d-216c-c3f5d2c7670c", "color": "#2980b9","url":"/CustomSpace/customWidgets/cr.png"},
-{"value": "7ac62bd4-8fce-a150-3b40-16a39a61383d", "color": "#f54287","url":"/CustomSpace/customWidgets/ma.png"} 
-	],
-	"Field": "ClassId",
+`<div class='customScheduler'>{
+	"dash1": "42d7b883-0c0b-5a00-9ef2-ccfe289ec944", 
+	"Field": "Assigned",
 	"IdField": "WorkItemId",
 	"TitleField": "DisplayName",
-	"startField": "ScheduledStartDate",
-"Legend": "true",
-	"endField": "ScheduledEndDate"
+	"startField": "LastModified",
+	"endField": "Now", 
+        "workItem": "true",
+"Legend":"auto"
 }</div>`
 
 Screenshot: 
