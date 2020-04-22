@@ -65,3 +65,7 @@ Here is an example of a custom scheduler definition:
 "dash1Columns": ["Status", "WICount"],
 "dash2Columns": ["WorkItemId", "Title", "Status", "AffectedUser"]
 }</div>`
+
+Screenshot: 
+
+![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/gridHierarchySS.png "Hierarchy Grid Screenshot")
