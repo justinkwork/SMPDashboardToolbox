@@ -85,3 +85,6 @@ To add the Count to Grid widget, create a div in the HTML widget with the class 
 "dash1":"665132ad-6dc0-cd05-b81a-97689753de17" ,
 "dash1Columns": ["WorkItemId","Title","Status"]
 }</div>`
+
+Screenshot: 
+![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/CountToGrid.gif "Count to Grid Screenshot")
