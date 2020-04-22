@@ -58,7 +58,7 @@ To add the hierarchy grid, create a div in the HTML widget with the class name o
 + dash1Columns (**required**) - An array of (case sensitve) field names from the _dash1_ query.  It must contain the field specified as the _link_.
 + dash2Columns (**required**) - An array of (case sensitve) field names from the _dash2_ query.  It must contain the field specified as the _link_.
 
-Here is an example of a custom scheduler definition:   
+Here is an example of a Hierarchy Grid widget definition:   
 `<div class='gridHierarchy' style='height: 450px;'>{"dash1":"e31fd4b0-6588-bed7-de1c-44315d006f37", 
 "dash2":"b0c47cf0-8935-3667-e32e-941b15065d60",
 "link":"Status",
@@ -67,5 +67,21 @@ Here is an example of a custom scheduler definition:
 }</div>`
 
 Screenshot: 
-
 ![alt text](https://raw.githubusercontent.com/justinkwork/SMPDashboardToolbox/master/screenshots/gridHierarchySS.png "Hierarchy Grid Screenshot")
+
+## Count to Grid 
+This is a widget that takes a dashboard query and displays the count of records but lets you click the count to see the underlying data that the count represents.
+
+To add the Count to Grid widget, create a div in the HTML widget with the class name of countToGrid like this:
+  `<div class="countToGrid"><div>`
+ 
+ To populate data into the Scheduler, there needs to be a JSON definition.  
+ Here are the properties that will need to be added to the JSON:
+  + dash1 (**required**) - this is the query Id of the dashboard query that will serve as the data source
+  + dash1Columns (**required**) - An array of (case sensitve) field names from the _dash1_ query that will be visible in the underlying grid.
+  
+  Here is an example of a Count to Grid widget definition:   
+`<div class="countToGrid">{
+"dash1":"665132ad-6dc0-cd05-b81a-97689753de17" ,
+"dash1Columns": ["WorkItemId","Title","Status"]
+}</div>`
